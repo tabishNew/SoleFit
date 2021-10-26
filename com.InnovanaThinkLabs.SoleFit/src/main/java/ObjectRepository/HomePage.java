@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+import GenericUtils.WebDriverUtility;
+
+public class HomePage extends WebDriverUtility{
 	WebDriver driver;
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -42,6 +44,7 @@ public class HomePage {
 	}
 	 public void employeemanagementlink() {
 		 employeemanagement.click();
+		
 		 
 	 }
 	 public void signOut() {

@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import GenericUtils.WebDriverUtility;
 
-public class EmployeeManagement extends WebDriverUtility {
+public class EMaddEmployees extends WebDriverUtility {
 
-	public EmployeeManagement(WebDriver driver) {
+	public EMaddEmployees(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -46,7 +46,7 @@ public class EmployeeManagement extends WebDriverUtility {
 	@FindBy(id="Email")
 	private WebElement empemailtxt;
 	
-	@FindBy(name="Mobile")
+	@FindBy(id="Mobile")
 	private WebElement empmobileno;
 	
 	@FindBy(name="Emergency_Contact_Name")
@@ -113,8 +113,9 @@ public class EmployeeManagement extends WebDriverUtility {
 
 	
 	
-	public void empaddEmployee() {
+	public void empaddEmployee(WebDriver driver) {
 		empaddemployeelink.click();
+		waitForElementToBeClickable(empaddemployeelink, driver);
 	}
 	public void empcountry(String countryname) {
 		empcountrydropdown.click();
@@ -130,7 +131,7 @@ public class EmployeeManagement extends WebDriverUtility {
 	}
 	public void empbranch(String branchname) {
 		empbranchdropdown.click();
-		select(empbranchdropdown,branchname);
+		select(empbranchdropdown, branchname);
 	}
 	public void empdepartment(String departmentname) {
 		empdepartmentdropdown.click();

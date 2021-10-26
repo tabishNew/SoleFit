@@ -58,16 +58,17 @@ public class BaseClass {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.login(USERNAME, PASSWORD);
 	}
-	@AfterMethod(groups= {"smokeTest","regressionTest"})
+}
+	/*@AfterMethod(groups= {"smokeTest","regressionTest"})
 	public void tearDown() {
 		homepage.signOut();
 	}
 	
-	@AfterClass(groups= {"smokeTest","regressionTest"})
+	//@AfterClass(groups= {"smokeTest","regressionTest"})
 	public void configAC() {
 		driver.quit();
 	}
-	@AfterSuite(groups= {"smokeTest","regressionTest"})
+	//@AfterSuite(groups= {"smokeTest","regressionTest"})
 	public void configAS() {
 		System.out.println("Close the Connection from DataBase");
 	}
@@ -78,6 +79,7 @@ public class BaseClass {
 		
 		
 	}
+	*/
 	
 	
 	
